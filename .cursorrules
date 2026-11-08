@@ -1,0 +1,54 @@
+# Course and lab authoring rules
+
+When **planning** a course (outline and architecture), read and strictly follow:
+
+- [.agents/skills/course-architect/SKILL.md](.agents/skills/course-architect/SKILL.md)
+- [.agents/skills/course-architect/examples/outline-template.md](.agents/skills/course-architect/examples/outline-template.md)
+
+When writing the **spine** after an approved outline, read and strictly follow:
+
+- [.agents/skills/course-spine-generator/SKILL.md](.agents/skills/course-spine-generator/SKILL.md)
+- [.agents/skills/shared/course-spine.md](.agents/skills/shared/course-spine.md)
+- [.agents/skills/shared/slide-markdown-rules.md](.agents/skills/shared/slide-markdown-rules.md)
+
+When generating, editing, or validating **teaching slides** in this repository, read and strictly follow:
+
+- [.agents/skills/course-generator/SKILL.md](.agents/skills/course-generator/SKILL.md)
+- [.agents/skills/course-generator/examples/layout-templates.md](.agents/skills/course-generator/examples/layout-templates.md)
+- [.agents/skills/shared/slide-markdown-rules.md](.agents/skills/shared/slide-markdown-rules.md)
+- [.agents/skills/shared/course-spine.md](.agents/skills/shared/course-spine.md)
+- [.agents/skills/shared/svg-craft.md](.agents/skills/shared/svg-craft.md)
+
+When doing an **instructor review** of a finished slide course, read and strictly follow:
+
+- [.agents/skills/instructor-review/SKILL.md](.agents/skills/instructor-review/SKILL.md)
+
+When polishing **course visuals** (layouts, SVG diagrams, generated images, screenshot placeholders) after Instructor Review, read and strictly follow:
+
+- [.agents/skills/course-graphics-designer/SKILL.md](.agents/skills/course-graphics-designer/SKILL.md)
+- [.agents/skills/course-graphics-designer/examples/visual-patterns.md](.agents/skills/course-graphics-designer/examples/visual-patterns.md)
+- [.agents/skills/shared/svg-craft.md](.agents/skills/shared/svg-craft.md)
+
+When reviewing for **accuracy and currency**, read and strictly follow:
+
+- [.agents/skills/technical-editor/SKILL.md](.agents/skills/technical-editor/SKILL.md)
+- [.agents/skills/shared/verify-current-facts.md](.agents/skills/shared/verify-current-facts.md)
+
+When **proofreading** slide (or lab) Markdown for spelling, grammar, typography, and consistency, read and strictly follow:
+
+- [.agents/skills/copy-editor/SKILL.md](.agents/skills/copy-editor/SKILL.md)
+- [.agents/skills/copy-editor/examples/editing-patterns.md](.agents/skills/copy-editor/examples/editing-patterns.md)
+
+When generating, outlining, editing, or validating **labs**, read and strictly follow:
+
+- [.agents/skills/lab-generator/SKILL.md](.agents/skills/lab-generator/SKILL.md)
+- [.agents/skills/lab-generator/examples/lab-template.md](.agents/skills/lab-generator/examples/lab-template.md)
+- [.agents/skills/shared/lab-markdown-rules.md](.agents/skills/shared/lab-markdown-rules.md)
+
+When **testing** a lab without rewriting it, read and strictly follow:
+
+- [.agents/skills/lab-tester/SKILL.md](.agents/skills/lab-tester/SKILL.md)
+
+Put slide chapters and shared images under `course/`. Put each lab under `labs/lab-NN-slug/` with `lab.md` and `images/`. Preview labs at https://labv.roitraining.com/ (lab folder URL). A lab slide’s body is `Lab link: TODO`. Default slide theme is `roi-alt-theme`.
+
+Pipeline: [PIPELINE.md](PIPELINE.md).
