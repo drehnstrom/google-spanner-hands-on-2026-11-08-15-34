@@ -1,3 +1,4 @@
 course/01-introduction-and-architecture.md
 course/02-schema-design-and-data-modeling.md
 course/03-querying-and-data-manipulation.md
+course/04-python-client-api.md
