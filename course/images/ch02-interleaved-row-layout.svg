@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 260" role="img" aria-label="Comparison of non-interleaved tables across separate servers requiring network joins versus interleaved tables co-located in a single split">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#bd35c2"/>
+    </marker>
+  </defs>
+
+  <!-- LEFT: Non-Interleaved Storage -->
+  <g transform="translate(10, 10)">
+    <!-- Node 1 Split: Customers -->
+    <rect x="0" y="24" width="140" height="160" rx="6" fill="none" stroke="#082445" stroke-width="2"/>
+    <rect x="0" y="24" width="140" height="28" rx="6" fill="#082445"/>
+    <text x="70" y="43" text-anchor="middle" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="600">Customers (Node 1)</text>
+
+    <rect x="10" y="62" width="120" height="24" rx="4" fill="#082445"/>
+    <text x="70" y="78" text-anchor="middle" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="11">Customer 101</text>
+
+    <rect x="10" y="96" width="120" height="24" rx="4" fill="#082445"/>
+    <text x="70" y="112" text-anchor="middle" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="11">Customer 102</text>
+
+    <text x="70" y="150" text-anchor="middle" fill="#495f7a" font-family="Inter, system-ui, sans-serif" font-size="10">Split Boundary</text>
+
+    <!-- Cross-node network link -->
+    <path d="M 148 108 L 192 108" fill="none" stroke="#bd35c2" stroke-width="2" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+    <path d="M 192 92 L 148 92" fill="none" stroke="#bd35c2" stroke-width="2" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+    <text x="170" y="80" text-anchor="middle" fill="#bd35c2" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="600">Network RPC</text>
+
+    <!-- Node 2 Split: Orders -->
+    <rect x="200" y="24" width="140" height="160" rx="6" fill="none" stroke="#082445" stroke-width="2"/>
+    <rect x="200" y="24" width="140" height="28" rx="6" fill="#082445"/>
+    <text x="270" y="43" text-anchor="middle" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="600">Orders (Node 2)</text>
+
+    <rect x="210" y="62" width="120" height="22" rx="4" fill="#1e71d6"/>
+    <text x="270" y="77" text-anchor="middle" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="10">Order 101 / 1</text>
+
+    <rect x="210" y="90" width="120" height="22" rx="4" fill="#1e71d6"/>
+    <text x="270" y="105" text-anchor="middle" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="10">Order 101 / 2</text>
+
+    <rect x="210" y="118" width="120" height="22" rx="4" fill="#1e71d6"/>
+    <text x="270" y="133" text-anchor="middle" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="10">Order 102 / 1</text>
+
+    <text x="170" y="210" text-anchor="middle" fill="#495f7a" font-family="Inter, system-ui, sans-serif" font-size="11">Non-Interleaved: Distributed Joins</text>
+  </g>
+
+  <!-- Divider -->
+  <line x1="380" y1="20" x2="380" y2="230" stroke="#495f7a" stroke-width="1" stroke-dasharray="4,4" opacity="0.4"/>
+
+  <!-- RIGHT: Interleaved Storage -->
+  <g transform="translate(420, 10)">
+    <!-- Co-located Split Container -->
+    <rect x="0" y="24" width="310" height="175" rx="6" fill="none" stroke="#1e71d6" stroke-width="2"/>
+    <rect x="0" y="24" width="310" height="28" rx="6" fill="#1e71d6"/>
+    <text x="155" y="43" text-anchor="middle" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="600">Single Co-Located Split (Node 1)</text>
+
+    <!-- Interleaved row order on disk -->
+    <rect x="12" y="60" width="286" height="22" rx="3" fill="#082445"/>
+    <text x="24" y="75" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="600">Customer 101</text>
+
+    <rect x="36" y="85" width="262" height="18" rx="3" fill="#1e71d6"/>
+    <text x="46" y="98" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="9.5">Order 101 / 1 (Interleaved Child)</text>
+
+    <rect x="36" y="106" width="262" height="18" rx="3" fill="#1e71d6"/>
+    <text x="46" y="119" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="9.5">Order 101 / 2 (Interleaved Child)</text>
+
+    <rect x="12" y="129" width="286" height="22" rx="3" fill="#082445"/>
+    <text x="24" y="144" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="600">Customer 102</text>
+
+    <rect x="36" y="154" width="262" height="18" rx="3" fill="#1e71d6"/>
+    <text x="46" y="167" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="9.5">Order 102 / 1 (Interleaved Child)</text>
+
+    <text x="155" y="222" text-anchor="middle" fill="#495f7a" font-family="Inter, system-ui, sans-serif" font-size="11">Interleaved: Zero Network Hops for Hierarchical Joins</text>
+  </g>
+</svg>
