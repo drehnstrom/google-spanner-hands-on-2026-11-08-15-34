@@ -3,3 +3,4 @@ course/02-schema-design-and-data-modeling.md
 course/03-querying-and-data-manipulation.md
 course/04-python-client-api.md
 course/05-database-administration-and-operations.md
+course/06-migrating-databases.md
