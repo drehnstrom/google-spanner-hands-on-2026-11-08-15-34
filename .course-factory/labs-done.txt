@@ -1,0 +1,1 @@
+labs/lab-01-lab-creating-and-configuring-a-spanner-instance-and-database/lab.md
