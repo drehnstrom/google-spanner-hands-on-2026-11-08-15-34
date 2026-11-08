@@ -38,7 +38,7 @@ Google Spanner: Hands-On
 # Dialect Selection: GoogleSQL vs PostgreSQL
 
 ### GoogleSQL Dialect
-- Google native relational dialect aligned with GoogleSQL and BigQuery standards
+- Google’s native relational dialect aligned with GoogleSQL and BigQuery standards
 - Native types include `INT64`, `FLOAT64`, `NUMERIC`, `STRING`, `BYTES`, and `JSON`
 - Offers full feature parity with all Spanner capabilities and internal extensions
 - Ideal for greenfield cloud applications standardizing on Google Cloud services
@@ -410,7 +410,7 @@ CREATE TABLE OrderItems (
 # Eliminating Back-Joins with Stored Columns
 
 - The `STORING` clause duplicates non-key columns directly into the secondary index table
-- Enables "covering indexes" where queries are resolved entirely from index data alone
+- Enables “covering indexes” where queries are resolved entirely from index data alone
 - Eliminates the distributed back-join phase and associated network round trips
 
 ```sql

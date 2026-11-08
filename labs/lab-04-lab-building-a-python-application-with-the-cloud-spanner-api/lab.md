@@ -371,7 +371,7 @@ In this task, you implement an order checkout transaction using `database.run_in
 ```
 
 > [!NOTE]
-> Because `Orders` and `OrderItems` are interleaved within `Customers`, all four updates occur within the customer partition's Paxos split. Spanner commits the transaction in a single Paxos consensus round without distributed Two-Phase Commit overhead.
+> Because `Orders` and `OrderItems` are interleaved within `Customers`, all four updates occur within the customer partition’s Paxos split. Spanner commits the transaction in a single Paxos consensus round without distributed Two-Phase Commit overhead.
 
 3. Update `main()` in `order_service.py` to execute a valid order placement and an invalid order placement that triggers insufficient funds:
 

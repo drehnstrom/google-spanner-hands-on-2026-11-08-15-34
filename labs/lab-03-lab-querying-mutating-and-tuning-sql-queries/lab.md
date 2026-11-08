@@ -325,7 +325,7 @@ gcloud spanner rows delete \
 ```
 
 7. Observe the key operational differences between DML and Mutations:
-   - DML statements parse and compile SQL, support SQL expressions and subqueries, and allow subsequent statements in the transaction to read modified rows ("read-your-writes").
+   - DML statements parse and compile SQL, support SQL expressions and subqueries, and allow subsequent statements in the transaction to read modified rows (“read-your-writes”).
    - Mutations buffer key-value modifications on the client side and transmit them at commit time without SQL parsing overhead, delivering higher write throughput but without read-your-writes visibility during the transaction.
 
 ---
@@ -499,7 +499,7 @@ gcloud spanner databases execute-sql "${GOOGLESQL_DB}" \
 
 ### Bonus Task 8: Diagnose and remediate an unbounded root aggregation bottleneck
 
-In this optional stretch task, you simulate the "Unbounded Root Aggregation" anti-pattern and compare its execution plan against an index-scoped query.
+In this optional stretch task, you simulate the “Unbounded Root Aggregation” anti-pattern and compare its execution plan against an index-scoped query.
 
 1. Run an aggregation query across all orders grouped by status using `--query-mode=PROFILE`:
 
@@ -524,7 +524,7 @@ gcloud spanner databases execute-sql "${GOOGLESQL_DB}" \
 ```
 
 4. Compare the profile results:
-   - The partition-scoped query targets the specific split hosting Sophia's records, eliminating distributed cross-split coordination.
+   - The partition-scoped query targets the specific split hosting Sophia’s records, eliminating distributed cross-split coordination.
 
 ---
 

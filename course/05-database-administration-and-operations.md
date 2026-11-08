@@ -182,7 +182,7 @@ gcloud spanner instances describe production-instance \
 ---
 
 <!-- layout: 2-column -->
-# Scale-Up vs. Scale-Down Mechanics
+# Scale-Up vs Scale-Down Mechanics
 
 ### Scale-Up Dynamics
 - Evaluated continuously every few minutes against rolling metric windows
@@ -485,7 +485,7 @@ gcloud spanner databases add-iam-policy-binding orders-db \
 ---
 
 <!-- layout: 2-column -->
-# Data Protection Strategies: Backups vs. PITR
+# Data Protection Strategies: Backups vs PITR
 
 ### Cloud Spanner Backups
 - Complete, consistent snapshots of database schema and table data

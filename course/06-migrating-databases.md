@@ -55,7 +55,7 @@ Google Spanner: Hands-On
 ---
 
 <!-- layout: 2-column -->
-# Migration Methodology: Offline vs. Online
+# Migration Methodology: Offline vs Online
 
 ### Offline Migration
 - Database dump exported from source and imported directly into Cloud Spanner
@@ -128,7 +128,7 @@ Google Spanner: Hands-On
 ---
 
 <!-- layout: 2-column -->
-# Dialect Selection: GoogleSQL vs. PostgreSQL
+# Dialect Selection: GoogleSQL vs PostgreSQL
 
 ### GoogleSQL Dialect
 - Native Spanner dialect adhering to Google SQL standard
@@ -606,7 +606,7 @@ Lab link: TODO
 
 - Each secondary index requires a separate write mutation for every inserted row, rapidly exhausting transaction mutation limits
 - Synchronous secondary index maintenance scatters writes across multiple splits, inducing distributed lock contention and latency spikes
-- Creating secondary indexes post-load leverages Spanner asynchronous backfill engine, building indexes in the background without locking tables
+- Creating secondary indexes post-load leverages Spanner’s asynchronous backfill engine, building indexes in the background without locking tables
 - Dropping secondary indexes prior to bulk loading can improve ingestion throughput by 4x to 10x
 
 ---

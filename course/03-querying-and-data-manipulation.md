@@ -38,7 +38,7 @@ Google Spanner: Hands-On
 # Distributed Query Execution Architecture
 
 ### Coordinator and Worker Flow
-- **Root Coordinator**: The Spanner compute node receiving client query compiles the execution plan.
+- **Root Coordinator**: The Spanner compute node receiving the client query compiles the execution plan.
 - **Split Pruning**: Optimizer inspects primary key filters to route work only to splits hosting relevant data.
 - **Remote Execution**: Subplans dispatch via high-speed internal RPC to Paxos leader nodes owning targeted splits.
 
@@ -613,7 +613,7 @@ with database.snapshot(max_staleness=datetime.timedelta(seconds=15)) as snapshot
 <!-- below-columns -->
 
 > [!IMPORTANT]
-> If a transaction does not contain an `INSERT`, `UPDATE`, `DELETE`, or Mutation, it should never be executed as a Read-Write transaction.
+> If a transaction does not contain an `INSERT`, `UPDATE`, `DELETE`, or Mutation, it should never be executed as a read-write transaction.
 
 ---
 

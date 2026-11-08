@@ -76,7 +76,7 @@ Google Spanner: Hands-On
 - **Database Dialect**: GoogleSQL or PostgreSQL syntax selected at database creation
 - **Tables and Interleaving**: Relational structures defining data locality
 - **Splits**: Dynamic, contiguous ranges of rows partitioned by primary key
-- **Colossus**: Underneath compute, Google distributed file system persists all data
+- **Colossus**: Underneath compute, Google’s distributed file system persists all data
 
 <!-- below-columns -->
 
@@ -95,7 +95,7 @@ Google Spanner: Hands-On
 
 ### The Spanner Operational Reality
 - Spanner is technically a CP system under formal definitions, prioritizing consistency during partitions.
-- Google private fiber-optic network infrastructure makes network partitions vanishingly rare in practice.
+- Google’s private fiber-optic network infrastructure makes network partitions vanishingly rare in practice.
 - Paxos quorums maintain continuous read and write availability even during physical server or zone failures.
 
 ---
@@ -135,7 +135,7 @@ Google Spanner: Hands-On
 - Instances can scale compute up or down in minutes without data rebalancing.
 
 ### Colossus Storage Layer
-- Google global distributed file system stores all data blocks redundantly across disks.
+- Google’s global distributed file system stores all data blocks redundantly across disks.
 - Write operations commit durable write-ahead log records directly to Colossus.
 - If a compute node fails, an alternate node immediately assumes ownership of its splits.
 
@@ -481,7 +481,7 @@ Google Spanner: Hands-On
 # Selecting a Database Dialect
 
 ### GoogleSQL Dialect
-- Google native relational dialect adhering to ANSI SQL:2011 standards.
+- Google’s native relational dialect adhering to ANSI SQL:2011 standards.
 - Consistent syntax and data types with BigQuery, streamlining analytics workflows.
 - Native data types include `INT64`, `FLOAT64`, `STRING`, `BYTES`, `TIMESTAMP`, and `JSON`.
 - Recommended for greenfield cloud applications designed natively on Google Cloud.
@@ -518,7 +518,7 @@ gcloud spanner databases create orders-db \
 ```
 
 > [!TIP]
-> Apply labels during instance creation (`--labels=env=prod,team=billing`) to enable granular cost tracking in Google Cloud Cloud Billing reports.
+> Apply labels during instance creation (`--labels=env=prod,team=billing`) to enable granular cost tracking in Google Cloud Billing reports.
 
 ---
 
